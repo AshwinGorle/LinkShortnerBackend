@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Shree ganesh</h1>
+    <ul>
+     <% urls.forEach(url => { %>
+        <li><%= url.redirectURL %></li>
+     <% }) %>
+    </ul>
+    <table>
+        <thead>
+            <th>Short Url</th>
+            <th>redirect Url</th>
+            <th>clicks</th>
+        </thead>
+        <tbody>
+            <% urls.forEach(url => { %>
+                 <tr>
+                    <td><%= url.shortURL %></td>
+                    <td><%= url.redirectURL %></td>
+                    <td><%= url.clicks %></td>
+                 </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>
